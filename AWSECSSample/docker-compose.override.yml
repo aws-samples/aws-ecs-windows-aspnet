@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  awsecssample:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat

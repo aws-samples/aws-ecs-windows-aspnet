@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  awsecssample:
+    image: awsecssample
+    build:
+      context: .\AWSECSSample
+      dockerfile: Dockerfile
