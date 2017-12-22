@@ -187,7 +187,7 @@ Amazon ECS manages clusters of Amazon EC2 compute instances that it deploys cont
 The third option is to manually create a cluster, set up container instances, ecs agent and other dependencies mentioned in this link http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_Windows_getting_started.html. The first option of leveraging Cloud formation template for ecs windows cluster is leveraged in this guidance.
 
 
-## **6.1	Custom Cloud Formation template**
+## **6.1	Reference Architecture**
 The ECS Task definition, ECS Cluster definition and IAM roles are modified in the default cloud formation template mentioned in section 6 is modified to create a custom stack. The customized template is attached below.![](/screenshots/pic15new.jpg)
  
 
