@@ -225,6 +225,10 @@ The task definition for running windows container image (ASP.NET MVC) should loo
 
 
 ```
+
+The above ECS task definition pulls the latest image from the elastic container repository. It also allocates 500 MB of memory and 100 units (out of 1024) of CPU for execution. The task definition also maps the host port 80 with the container port 80. It also creates custom log groups.
+
+
 ## **6.3 ECS Cluster creation and configuration**
 
 The custom cloud formation template created in section 6.1 is validated in the cloud formation designer. The stack creation is initiated by referring to the custom template stored in S3.
