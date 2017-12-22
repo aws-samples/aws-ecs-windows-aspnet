@@ -195,15 +195,20 @@ The ECS Task definition, ECS Cluster definition and IAM roles are modified in th
 The task definition for running windows container image (ASP.NET MVC) should look like this.
 
 ```
+
 "taskdefinition": {
             "Type": "AWS::ECS::TaskDefinition",
             "Properties": {
                 "ContainerDefinitions": [{
-                    "Name": "aws_ecs_sample",
-                    "Cpu": "100",
+                    "Name": {
+                      "Ref" : "AppName"
+                      },
+                    "Cpu": "200",
                     "Essential": "true",
-                    "Image": "yourawsaccountnumber.dkr.ecr.ap-southeast-1.amazonaws.com/sundardocker:latest",
-                    "Memory": "500",
+                    "Image": {
+                        "Ref" : "ECSImageName"
+                      },
+                    "Memory": "2048",
                     "LogConfiguration": {
                         "LogDriver": "awslogs",
                         "Options": {
@@ -213,7 +218,9 @@ The task definition for running windows container image (ASP.NET MVC) should loo
                             "awslogs-region": {
                                 "Ref": "AWS::Region"
                             },
-                            "awslogs-stream-prefix": "aws_ecs_sample"
+                            "awslogs-stream-prefix": {
+                              "Ref" : "AppName"
+                              }
                         }
                     },
                     "PortMappings": [{
@@ -222,7 +229,6 @@ The task definition for running windows container image (ASP.NET MVC) should loo
                 }]
             }
         }
-
 
 ```
 
