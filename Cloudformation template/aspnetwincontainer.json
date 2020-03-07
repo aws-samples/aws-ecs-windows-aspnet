@@ -110,8 +110,8 @@
             },
             "ca-central-1": {
                 "AMIID": "ami-2859e24c"
-            },
             }
+        }
     },
     "Resources": {
         "EcsSecurityGroup": {
